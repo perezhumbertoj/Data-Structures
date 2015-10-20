@@ -13,8 +13,6 @@ public:
 	ItemType getItem() const;
 	void setLeft(int left);
 	int getLeft() const;
-	setRight(int right);
-	getRight() const;
-	. . .
+	void setRight(int right);
+	int getRight() const;
 }; // end TreeNode
-//Test
