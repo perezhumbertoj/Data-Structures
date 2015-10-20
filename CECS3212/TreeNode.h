@@ -1,18 +1,26 @@
 #pragma once
-template < class ItemType>
+
+template <class ItemType>
 class TreeNode
 {
 private:
 	ItemType item; // Data portion
+	TreeNode<ItemType>* leftNodePtr;
+	TreeNode<ItemType>* rightNodePtr;
 	int leftChild; // Index to left child
 	int rightChild; // Index to right child
 public:
 	TreeNode();
-	TreeNode(const ItemType& nodeItem);
-	void setItem(const Itemtype& nodeItem);
+	TreeNode(const ItemType& anItem);
+	//TreeNode(const ItemType& anItem, Node<ItemType>* nextNodePtr);
+
+
+	void setItem(const ItemType& anItem);
+	void setLeft(TreeNode<ItemType>* leftNodePtr);
+	void setRight(TreeNode<ItemType>* rightNodePtr);
+
+
 	ItemType getItem() const;
-	void setLeft(int left);
-	int getLeft() const;
-	void setRight(int right);
-	int getRight() const;
+	Node<ItemType>* getRight() const;
+	Node<ItemType>* getLeft() const;
 }; // end TreeNode
