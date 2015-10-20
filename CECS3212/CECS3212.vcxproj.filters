@@ -44,13 +44,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TreeNode.cpp">
+    <ClCompile Include="TreeMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BinarySearchTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MainQueue.cpp">
+    <ClCompile Include="QueueMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
