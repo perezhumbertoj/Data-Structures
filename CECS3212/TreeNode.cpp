@@ -4,19 +4,15 @@
 //                         CONSTRUCTORS                    //
 //*********************************************************//
 
-template<class ItemType>
-TreeNode<ItemType>::TreeNode()
+template <class ItemType>
+TreeNode<ItemType>::TreeNode() : next(NULL), leftChild(1), rightChild(1)
 {
+} // end default constructor
 
-}
-
-template<class ItemType>
-TreeNode<ItemType>::TreeNode(const ItemType& nodeItem)
+template <class ItemType>
+TreeNode<ItemType>::TreeNode(const ItemType& anItem) : item(anItem), left(NULL), right(NULL)
 {
-	this->item = nodeItem.item;
-	this->leftChild = nodeItem.leftChild;
-	this->rightChild = nodeItem.rightChild;
-}
+} // end constructor
 
 template<class ItemType>
 TreeNode<ItemType>::~TreeNode()
@@ -34,15 +30,15 @@ void TreeNode<ItemType>::setItem(const ItemType& nodeItem)
 }
 
 template<class ItemType>
-void TreeNode<ItemType>::setLeft(int left)
+void TreeNode<ItemType>::setLeft(TreeNode<ItemType>* leftNodePtr)
 {
-	this->leftChild = left;
-}
+	this->left = leftNodePtr;
+} 
 
 template<class ItemType>
-void TreeNode<ItemType>::setRight(int right)
+void TreeNode<ItemType>::setRight(TreeNode<ItemType>* rightNodePtr)
 {
-	this->leftChild = right;
+	this->left = leftNodePtr;
 }
 
 //*********************************************************//
@@ -50,19 +46,19 @@ void TreeNode<ItemType>::setRight(int right)
 //*********************************************************//
 
 template<class ItemType>
-ItemType TreeNode<ItemType>::getItem(const Itemtype& nodeItem)
+ItemType TreeNode<ItemType>::getItem() const
 {
 	return this->item;
 }
 
 template<class ItemType>
-int TreeNode<ItemType>::getLeft(int left)
+int TreeNode<ItemType>::getLeft() const
 {
 	return this->left;
 }
 
 template<class ItemType>
-int TreeNode<ItemType>::getRight(int right)
+int TreeNode<ItemType>::getRight() const
 {
 	return this->right;
 }

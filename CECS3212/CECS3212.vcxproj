@@ -79,6 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
+    <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListInterface.h" />
     <ClInclude Include="ListQueue.h" />
@@ -88,8 +89,8 @@
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTreeInterface.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="MainQueue.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
