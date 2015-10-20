@@ -5,7 +5,7 @@ template <class ItemType>
 class BinarySearchTree
 {
 private:
-	TreeNode<ItemType>* headPtr; // Pointer to first node
+	TreeNode<ItemType>* rootPtr; // Pointer to first node
 	int itemCount;
 public:
 	BinarySearchTree();

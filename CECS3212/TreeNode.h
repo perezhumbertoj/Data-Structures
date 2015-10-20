@@ -21,6 +21,6 @@ public:
 
 
 	ItemType getItem() const;
-	Node<ItemType>* getRight() const;
-	Node<ItemType>* getLeft() const;
+	TreeNode<ItemType>* getRight() const;
+	TreeNode<ItemType>* getLeft() const;
 }; // end TreeNode

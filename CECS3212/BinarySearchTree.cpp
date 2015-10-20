@@ -6,7 +6,7 @@
 //*********************************************************//
 
 template<class ItemType>
-BinarySearchTree<ItemType>::BinarySearchTree() : headPtr(NULL), itemCount(0)
+BinarySearchTree<ItemType>::BinarySearchTree() : rootPtr(NULL), itemCount(0)
 {
 }
 
@@ -41,7 +41,15 @@ int BinarySearchTree<ItemType>::getNumberOfNodes() const
 template <class ItemType>
 ItemType BinarySearchTree<ItemType>::getRootData() const
 {
-
+	if (this->isEmpty()) 
+	{
+		cout << "Rettrieve index out of range \n";
+		exit(EXIT_FAILURE);
+	}//end if
+	else
+	{
+		return rootPtr->getItem();
+	}
 }
 
 template <class ItemType>
@@ -54,7 +62,22 @@ template <class ItemType>
 bool BinarySearchTree<ItemType>::add(const ItemType& newData)
 {
 	TreeNode<ItemType>* newNodePtr = new TreeNode<ItemType>();
-	newNodePtr->setItem(newEntry);
+	newNodePtr->setItem(newData);
+	if (this->isEmpty())
+	{
+		rootPtr = newNodePtr;
+		itemCount++;
+	}
+	else if (newNodePtr->getItem() == rootPtr->getItem())
+	{
+		cout << "This item already exists. \n";
+		exit(EXIT_FAILURE);
+	}
+	else if (newNodePtr->getItem() < rootPtr->getItem())
+	{
+
+	}
+
 }
 
 template <class ItemType>
