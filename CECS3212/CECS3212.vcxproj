@@ -80,6 +80,7 @@
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="Index.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListInterface.h" />
     <ClInclude Include="ListQueue.h" />
@@ -89,6 +90,8 @@
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Index.cpp" />
+    <ClCompile Include="Index_Generator.cpp" />
     <ClCompile Include="QueueMain.cpp" />
     <ClCompile Include="TreeMain.cpp" />
   </ItemGroup>

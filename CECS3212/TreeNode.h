@@ -1,5 +1,4 @@
-#ifndef _TREE_NODE
-#define _TREE_NODE
+#pragma once
 
 template <class ItemType>
 class TreeNode
@@ -23,8 +22,8 @@ public:
 	bool isLeaf();
 
 	ItemType getItem() const;
-	TreeNode<ItemType>* getRight() const;
-	TreeNode<ItemType>* getLeft() const;
+	TreeNode<ItemType>* getRight();
+	TreeNode<ItemType>* getLeft();
 }; // end TreeNode
 
 
@@ -84,13 +83,13 @@ ItemType TreeNode<ItemType>::getItem() const
 }
 
 template<class ItemType>
-TreeNode<ItemType>*TreeNode<ItemType>::getLeft() const
+TreeNode<ItemType>*TreeNode<ItemType>::getLeft()
 {
 	return this->leftNodePtr;
 }
 
 template<class ItemType>
-TreeNode<ItemType>* TreeNode<ItemType>::getRight() const
+TreeNode<ItemType>* TreeNode<ItemType>::getRight()
 {
 	return this->rightNodePtr;
 }
@@ -100,5 +99,3 @@ bool TreeNode<ItemType>::isLeaf()
 {
 	return (this->leftNodePtr == NULL && this->rightNodePtr == NULL);
 }
-
-#endif
